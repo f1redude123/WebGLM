@@ -1,7 +1,7 @@
-export default class IMatrix {
+export default class IMatrix extends Array {
   sizeX;
   sizeY;
-  data = new Array(this.sizeX*this.sizeY);
+  length = this.sizeX * this.sizeY;
   
   mul(mat) {
     if (this.constructor == IMatrix || mat.constructor == IMatrix) {
@@ -25,10 +25,10 @@ export default class IMatrix {
   }
 
   getAt(x, y) {
-    return this.data[x + y * this.sizeX];
+    return this[x + y * this.sizeX];
   }
   
   setAt(x, y, n) {
-    this.data[x + y * this.sizeX] = n;
+    this[x + y * this.sizeX] = n;
   }
 }
