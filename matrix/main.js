@@ -1,4 +1,4 @@
-import IMatrix from "https://f1redude123.github.io/WebGLM/IMatrix.js";
+import IMatrix from "https://f1redude123.github.io/WebGLM/matrix/IMatrix.js";
 
 export class Matrix4 extends IMatrix {
   sizeX = 4;
