@@ -1,7 +1,14 @@
 export default class IMatrix extends Array {
   sizeX;
   sizeY;
-  length = this.sizeX * this.sizeY;
+
+  constructor(...data) {
+    super(...data);
+
+    if (this.length != this.sizeX * this.sizeY) {
+      throw new Error("Matrix length did not match size of matrix");
+    }
+  }
   
   mul(mat) {
     if (this.constructor == IMatrix || mat.constructor == IMatrix) {
