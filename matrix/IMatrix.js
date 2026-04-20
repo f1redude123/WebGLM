@@ -29,6 +29,8 @@ export default class IMatrix extends Array {
         newMat.setAt(n, i, res);
       }
     }
+
+    this = newMat;
   }
 
   getAt(x, y) {
