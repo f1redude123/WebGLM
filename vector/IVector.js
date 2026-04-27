@@ -17,32 +17,42 @@ export default class IVector extends Array {
   }
 
   add(v) {
+    var newVec = structuredClone(this);
     for (var i = 0; i < this.size; i++) {
-      this[i] += v[i];
+      newVec[i] += v[i];
     }
+    return newVec;
   }
 
   sub(v) {
+    var newVec = structuredClone(this);
     for (var i = 0; i < this.size; i++) {
-      this[i] -= v[i];
+      newVec[i] -= v[i];
     }
+    return newVec;
   }
 
   mul(v) {
+    var newVec = structuredClone(this);
     for (var i = 0; i < this.size; i++) {
-      this[i] *= v[i];
+      newVec[i] *= v[i];
     }
+    return newVec;
   }
 
   div(v) {
+    var newVec = structuredClone(this);
     for (var i = 0; i < this.size; i++) {
-      this[i] /= v[i];
+      newVec[i] /= v[i];
     }
+    return newVec;
   }
 
   pow(v) {
+    var newVec = structuredClone(this);
     for (var i = 0; i < this.size; i++) {
-      this[i] = Math.pow(this[i], v[i]);
+      newVec[i] = Math.pow(this[i], v[i]);
     }
+    return newVec;
   }
 }
