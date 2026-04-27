@@ -4,10 +4,6 @@ export default class IMatrix extends Array {
 
   constructor(...data) {
     super(...data);
-
-    if (this.length != this.sizeX * this.sizeY) {
-      throw new Error("Matrix length did not match size of matrix");
-    }
   }
   
   mul(mat) {
@@ -30,7 +26,7 @@ export default class IMatrix extends Array {
       }
     }
 
-    this = newMat;
+    return newMat;
   }
 
   getAt(x, y) {
