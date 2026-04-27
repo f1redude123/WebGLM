@@ -19,7 +19,7 @@ export default class IVector extends Array {
           get: function() { return this[i]; },
           set: function(val) { this[i] = val; }
         }
-      )
+      );
     }
   }
 
