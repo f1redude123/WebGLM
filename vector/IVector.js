@@ -11,8 +11,15 @@ export default class IVector extends Array {
   constructor(...vals) {
     super(...vals);
 
-    for (var i = 0; i < this.size; i++) {
-      this[IVector.#DIMS[i]] = vals[i];
+    for (let i = 0; i < this.size; i++) {
+      Object.defineProperty(
+        this,
+        IVector.#DIMS[i],
+        {
+          get: function() { return this[i]; },
+          set: function(val) { this[i] = val; }
+        }
+      )
     }
   }
 
